@@ -1,0 +1,24 @@
+{
+  "name": "StudingReact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "like_button.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "custom": "echo \"That's custom script\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeteDekterev/StudingReact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeteDekterev/StudingReact/issues"
+  },
+  "homepage": "https://github.com/PeteDekterev/StudingReact#readme",
+  "dependencies": {
+    "terser": "^5.2.1"
+  }
+}
