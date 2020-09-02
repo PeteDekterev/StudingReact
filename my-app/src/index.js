@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 function Welcome(props) {
   return <h1>Привет, {props.name}</h1>;
 }
 
-const element = <Welcome name="Алиса" />;
+function App() {
+  return (
+    <div>
+      <Welcome name="Алиса" />
+      <Welcome name="Базилио" />
+      <Welcome name="Буратино" />
+    </div>
+  );
+}
+
 ReactDOM.render(
-  element,
+  <App />,
   document.getElementById('root')
 );
 
