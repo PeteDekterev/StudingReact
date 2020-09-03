@@ -9,7 +9,7 @@ import './index.css';
 // import NameForm from './components/NameForm';
 // import FlavorForm from './components/FlavorForm';
 // import Reservation from "./components/Reservation";
-import Calculator from "./components/Calculator";
+import Calculator from "./components/Calculator/Calculator";
 import * as serviceWorker from './serviceWorker';
 
 // const numbers = [1, 2, 3, 4, 5];
