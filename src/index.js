@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-function Clock(props) {
-  return (
-    <div>
-      <h1>Привет, мир!</h1>
-      <h2>Сейчас {props.date.toLocaleTimeString()}.</h2>
-    </div>
-  );
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Привет, мир!</h1>
+        <h2>Сейчас {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
 }
 
 function tick() {
