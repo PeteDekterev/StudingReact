@@ -7,10 +7,11 @@ import './index.css';
 // import Page from './components/Page';
 // import Arrays from './components/Arrays';
 // import NameForm from './components/NameForm';
-import FlavorForm from './components/FlavorForm';
+// import FlavorForm from './components/FlavorForm';
+import Reservation from "./components/Reservation";
 import * as serviceWorker from './serviceWorker';
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
 ReactDOM.render(
   <div>
@@ -20,7 +21,8 @@ ReactDOM.render(
     {/*<Page/>*/}
     {/*<Arrays numbers={numbers}/>*/}
     {/*<NameForm/>*/}
-    <FlavorForm/>
+    {/*<FlavorForm/>*/}
+    <Reservation/>
   </div>,
   document.getElementById('root')
 );
