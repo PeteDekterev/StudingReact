@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Clock from './components/Clock';
+import Toggle from './components/Toggle';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Clock />,
+  <div>
+    <Clock />
+    <Toggle/>
+  </div>,
   document.getElementById('root')
 );
 
