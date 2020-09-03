@@ -5,7 +5,10 @@ import Clock from './components/Clock';
 import Toggle from './components/Toggle';
 import LoginControl from './components/LoginControl';
 import Page from './components/Page';
+import Arrays from './components/Arrays';
 import * as serviceWorker from './serviceWorker';
+
+const numbers = [1, 2, 3, 4, 5];
 
 ReactDOM.render(
   <div>
@@ -13,6 +16,7 @@ ReactDOM.render(
     {/*<Toggle/>*/}
     {/*<LoginControl/>*/}
     <Page/>
+    <Arrays numbers={numbers}/>
   </div>,
   document.getElementById('root')
 );
