@@ -1,5 +1,9 @@
 import React from "react";
 
+function ListItem(props) {
+  return <li>{props.value}</li>;
+}
+
 class Arrays extends React.Component {
   componentDidMount() {
     const {numbers=[]} = this.props;
@@ -10,7 +14,7 @@ class Arrays extends React.Component {
   render() {
     const {numbers=[]} = this.props;
     const listItems = numbers.map((number) =>
-      <li key={number.toString()}>{number}</li>
+      <ListItem key={number.toString()} value={number} />
     );
     return(
       <div>
