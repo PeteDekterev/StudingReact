@@ -6,9 +6,7 @@ class Toggle extends React.Component {
     this.state = {isToggleOn: true};
   }
 
-  // Такой синтаксис гарантирует, что `this` привязан к handleClick.
-  // Предупреждение: это экспериментальный синтаксис
-  handleClick = () => {
+  handleClick() {
     this.setState(state => ({
       isToggleOn: !state.isToggleOn
     }));
@@ -17,7 +15,7 @@ class Toggle extends React.Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>
+      <button onClick={() => this.handleClick()}>
         {this.state.isToggleOn ? 'Включено' : 'Выключено'}
       </button>
     );
