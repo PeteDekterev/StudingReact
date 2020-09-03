@@ -39,8 +39,10 @@ class LoginControl extends React.Component {
     return (
       <div>
         <Greeting isLoggedIn={isLoggedIn} />
-        {isLoggedIn && <LogoutButton onClick={this.handleLogoutClick} />}
-        {!isLoggedIn && <LoginButton onClick={this.handleLoginClick} />}
+        {isLoggedIn  ?
+          <LogoutButton onClick={this.handleLogoutClick} /> :
+          <LoginButton onClick={this.handleLoginClick} />
+        }
       </div>
     );
   }
