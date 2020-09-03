@@ -3,24 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-function Welcome(props) {
-  return <h1>Привет, {props.name}</h1>;
-}
-
-function App() {
-  return (
+function tick() {
+  const element = (
     <div>
-      <Welcome name="Алиса" />
-      <Welcome name="Базилио" />
-      <Welcome name="Буратино" />
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
     </div>
+  );
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
   );
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+setInterval(tick, 1000);
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
