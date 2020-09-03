@@ -6,7 +6,8 @@ import './index.css';
 // import LoginControl from './components/LoginControl';
 // import Page from './components/Page';
 // import Arrays from './components/Arrays';
-import NameForm from './components/NameForm';
+// import NameForm from './components/NameForm';
+import FlavorForm from './components/FlavorForm';
 import * as serviceWorker from './serviceWorker';
 
 const numbers = [1, 2, 3, 4, 5];
@@ -18,7 +19,8 @@ ReactDOM.render(
     {/*<LoginControl/>*/}
     {/*<Page/>*/}
     {/*<Arrays numbers={numbers}/>*/}
-    <NameForm/>
+    {/*<NameForm/>*/}
+    <FlavorForm/>
   </div>,
   document.getElementById('root')
 );
