@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Clock from './components/Clock';
-import Toggle from './components/Toggle';
-import LoginControl from './components/LoginControl';
-import Page from './components/Page';
-import Arrays from './components/Arrays';
+// import Clock from './components/Clock';
+// import Toggle from './components/Toggle';
+// import LoginControl from './components/LoginControl';
+// import Page from './components/Page';
+// import Arrays from './components/Arrays';
+import NameForm from './components/NameForm';
 import * as serviceWorker from './serviceWorker';
 
 const numbers = [1, 2, 3, 4, 5];
@@ -15,8 +16,9 @@ ReactDOM.render(
     {/*<Clock/>*/}
     {/*<Toggle/>*/}
     {/*<LoginControl/>*/}
-    <Page/>
-    <Arrays numbers={numbers}/>
+    {/*<Page/>*/}
+    {/*<Arrays numbers={numbers}/>*/}
+    <NameForm/>
   </div>,
   document.getElementById('root')
 );
