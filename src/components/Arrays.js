@@ -13,13 +13,13 @@ class Arrays extends React.Component {
 
   render() {
     const {numbers=[]} = this.props;
-    const listItems = numbers.map((number) =>
-      <ListItem key={number.toString()} value={number} />
-    );
     return(
-      <div>
-        {listItems}
-      </div>
+      <ul>
+        {numbers.map((number) =>
+          <ListItem key={number.toString()}
+            value={number} />
+        )}
+      </ul>
     )
   }
 }
