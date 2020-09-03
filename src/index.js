@@ -4,25 +4,43 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  // добавляем методы жизненного цикла
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
   render() {
     return (
       <div>
         <h1>Привет, мир!</h1>
-        <h2>Сейчас {this.props.date.toLocaleTimeString()}.</h2>
+        <h2>Сейчас {this.state.date.toLocaleTimeString()}.</h2>
       </div>
     );
   }
 }
 
-function tick() {
-  ReactDOM.render(
-    <Clock date={new Date()} />,
-    document.getElementById('root')
-  );
-}
-
-setInterval(tick, 1000);
-
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
