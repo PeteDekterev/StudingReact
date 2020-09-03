@@ -10,7 +10,7 @@ class Arrays extends React.Component {
   render() {
     const {numbers=[]} = this.props;
     const listItems = numbers.map((number) =>
-      <li>{number}</li>
+      <li key={number.toString()}>{number}</li>
     );
     return(
       <div>
