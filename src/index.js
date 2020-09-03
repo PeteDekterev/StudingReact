@@ -4,13 +4,15 @@ import './index.css';
 import Clock from './components/Clock';
 import Toggle from './components/Toggle';
 import LoginControl from './components/LoginControl';
+import Page from './components/Page';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <div>
-    <Clock/>
-    <Toggle/>
-    <LoginControl/>
+    {/*<Clock/>*/}
+    {/*<Toggle/>*/}
+    {/*<LoginControl/>*/}
+    <Page/>
   </div>,
   document.getElementById('root')
 );
