@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Clock from './components/Clock';
 import Toggle from './components/Toggle';
-import Greeting from './components/Greeting';
+import LoginControl from './components/LoginControl';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <div>
-    <Clock />
+    <Clock/>
     <Toggle/>
-    <Greeting isLoggedIn={false}/>
+    <LoginControl/>
   </div>,
   document.getElementById('root')
 );
