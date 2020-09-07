@@ -10,10 +10,20 @@ import './index.css';
 // import FlavorForm from './components/FlavorForm';
 // import Reservation from "./components/Reservation";
 // import Calculator from "./components/Calculator/Calculator";
-import WelcomeDialog from "./components/WelcomeDialog";
+// import WelcomeDialog from "./components/WelcomeDialog";
+import FilterableProductTable from "./components/FilterableProductTable";
 import * as serviceWorker from './serviceWorker';
 
 // const numbers = [1, 2, 3, 4, 5];
+
+const PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
 
 ReactDOM.render(
   <div>
@@ -26,7 +36,8 @@ ReactDOM.render(
     {/*<FlavorForm/>*/}
     {/*<Reservation/>*/}
     {/*<Calculator/>*/}
-    <WelcomeDialog/>
+    {/*<WelcomeDialog/>*/}
+    <FilterableProductTable products={PRODUCTS} />
   </div>,
   document.getElementById('root')
 );
