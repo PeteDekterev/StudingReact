@@ -12,8 +12,9 @@ import './index.css';
 // import Calculator from "./components/Calculator/Calculator";
 // import WelcomeDialog from "./components/Dialog/WelcomeDialog";
 // import SignUpDialog from "./components/Dialog/SignUpDialog";
-import FilterableProductTable from "./components/FilterableProductTable";
-import Table from "./advancedComponents/Fragments/Table";
+// import FilterableProductTable from "./components/FilterableProductTable";
+// import Table from "./advancedComponents/Fragments/Table";
+import App from "./advancedComponents/CodeSplitting/App";
 import * as serviceWorker from './serviceWorker';
 
 // const numbers = [1, 2, 3, 4, 5];
@@ -41,7 +42,8 @@ ReactDOM.render(
     {/*<WelcomeDialog/>*/}
     {/*<SignUpDialog/>*/}
     {/*<FilterableProductTable products={PRODUCTS} />*/}
-    <Table/>
+    {/*<Table/>*/}
+    <App/>
   </div>,
   document.getElementById('root')
 );
