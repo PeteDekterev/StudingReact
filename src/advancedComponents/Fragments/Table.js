@@ -6,10 +6,10 @@ import React from 'react';
 class Columns extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <td>Привет</td>
         <td>Мир</td>
-      </React.Fragment>
+      </>
     );
   }
 }
