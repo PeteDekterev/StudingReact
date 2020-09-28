@@ -14,7 +14,8 @@ import './index.css';
 // import SignUpDialog from "./components/Dialog/SignUpDialog";
 // import FilterableProductTable from "./components/FilterableProductTable";
 // import Table from "./advancedComponents/Fragments/Table";
-import App from "./advancedComponents/CodeSplitting/App";
+// import App from "./advancedComponents/CodeSplitting/App";
+import App from "./advancedComponents/Context/App";
 import * as serviceWorker from './serviceWorker';
 
 // const numbers = [1, 2, 3, 4, 5];
