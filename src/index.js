@@ -10,9 +10,10 @@ import './index.css';
 // import FlavorForm from './components/FlavorForm';
 // import Reservation from "./components/Reservation";
 // import Calculator from "./components/Calculator/Calculator";
-import WelcomeDialog from "./components/Dialog/WelcomeDialog";
-import SignUpDialog from "./components/Dialog/SignUpDialog";
-// import FilterableProductTable from "./components/FilterableProductTable";
+// import WelcomeDialog from "./components/Dialog/WelcomeDialog";
+// import SignUpDialog from "./components/Dialog/SignUpDialog";
+import FilterableProductTable from "./components/FilterableProductTable";
+import Table from "./advancedComponents/Fragments/Table";
 import * as serviceWorker from './serviceWorker';
 
 // const numbers = [1, 2, 3, 4, 5];
@@ -38,8 +39,9 @@ ReactDOM.render(
     {/*<Reservation/>*/}
     {/*<Calculator/>*/}
     {/*<WelcomeDialog/>*/}
-    <SignUpDialog/>
+    {/*<SignUpDialog/>*/}
     {/*<FilterableProductTable products={PRODUCTS} />*/}
+    <Table/>
   </div>,
   document.getElementById('root')
 );
