@@ -1,6 +1,7 @@
 import React from "react";
 
-class MouseTracker extends React.Component {
+// Компонент <Mouse> инкапсулирует поведение, которое нам необходимо...
+class Mouse extends React.Component {
   constructor(props) {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -17,9 +18,21 @@ class MouseTracker extends React.Component {
   render() {
     return (
       <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
-        <h1>Перемещайте курсор мыши!</h1>
+
+        {/* ...но как можно отрендерить что-то, кроме <p>? */}
         <p>Текущее положение курсора мыши: ({this.state.x}, {this.state.y})</p>
       </div>
+    );
+  }
+}
+
+class MouseTracker extends React.Component {
+  render() {
+    return (
+      <>
+        <h1>Перемещайте курсор мыши!</h1>
+        <Mouse />
+      </>
     );
   }
 }
