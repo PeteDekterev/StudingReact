@@ -11,6 +11,10 @@ export const themes = {
   },
 };
 
-export const ThemeContext = React.createContext(
-  themes.dark // значение по умолчанию
-);
+// Убедитесь, что форма значения по умолчанию,
+// передаваемого в createContext, совпадает с формой объекта,
+// которую ожидают потребители контекста.
+export const ThemeContext = React.createContext({
+  theme: themes.dark,
+  toggleTheme: () => {},
+});

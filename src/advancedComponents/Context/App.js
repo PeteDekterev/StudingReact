@@ -1,22 +1,11 @@
 import React from 'react';
 import {ThemeContext, themes} from './theme-context';
 import ThemedButton from './themed-button';
-
-// Промежуточный компонент, который использует ThemedButton
-function Toolbar(props) {
-  return (
-    <ThemedButton onClick={props.changeTheme}>
-      Change Theme
-    </ThemedButton>
-  );
-}
+import ThemeTogglerButton from "./theme-toggler-button";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      theme: themes.light,
-    };
 
     this.toggleTheme = () => {
       this.setState(state => ({
@@ -26,24 +15,31 @@ class App extends React.Component {
             : themes.dark,
       }));
     };
+
+    // Состояние хранит функцию для обновления контекста,
+    // которая будет также передана в Provider-компонент.
+    this.state = {
+      theme: themes.light,
+      toggleTheme: this.toggleTheme,
+    };
   }
 
   render() {
-    // ThemedButton внутри ThemeProvider использует
-    // значение светлой UI-темы из состояния, в то время как
-    // ThemedButton, который находится вне ThemeProvider,
-    // использует тёмную UI-тему из значения по умолчанию
+    // Всё состояние передаётся в качестве значения контекста
     return (
-      <div>
-        <ThemeContext.Provider value={this.state.theme}>
-          <Toolbar changeTheme={this.toggleTheme} />
-        </ThemeContext.Provider>
-        <div>
-          <ThemedButton />
-        </div>
-      </div>
+      <ThemeContext.Provider value={this.state}>
+        <Content />
+      </ThemeContext.Provider>
     );
   }
+}
+
+function Content() {
+  return (
+    <div>
+      <ThemeTogglerButton />
+    </div>
+  );
 }
 
 export default App;
