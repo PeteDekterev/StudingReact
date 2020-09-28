@@ -15,7 +15,9 @@ import './index.css';
 // import FilterableProductTable from "./components/FilterableProductTable";
 // import Table from "./advancedComponents/Fragments/Table";
 // import App from "./advancedComponents/CodeSplitting/App";
-import App from "./advancedComponents/Context/App";
+// import App from "./advancedComponents/Context/App";
+// import CustomTextInput from "./advancedComponents/Refs/RefForDOM";
+import AutoFocusTextInput from "./advancedComponents/Refs/RefForClass";
 import * as serviceWorker from './serviceWorker';
 
 // const numbers = [1, 2, 3, 4, 5];
@@ -44,7 +46,9 @@ ReactDOM.render(
     {/*<SignUpDialog/>*/}
     {/*<FilterableProductTable products={PRODUCTS} />*/}
     {/*<Table/>*/}
-    <App/>
+    {/*<App/>*/}
+    {/*<CustomTextInput/>*/}
+    <AutoFocusTextInput/>
   </div>,
   document.getElementById('root')
 );
