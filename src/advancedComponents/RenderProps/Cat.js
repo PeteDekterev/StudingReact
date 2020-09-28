@@ -9,7 +9,7 @@ class Cat extends React.Component {
   }
 }
 
-class MouseWithCat extends React.Component {
+class Mouse extends React.Component {
   constructor(props) {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -28,12 +28,10 @@ class MouseWithCat extends React.Component {
       <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
 
         {/*
-          Мы могли бы просто поменять <p> на <Cat>... но тогда
-          нам нужно создать отдельный компонент <MouseWithSomethingElse>
-          каждый раз, когда он нужен нам, поэтому <MouseWithCat>
-          пока что нельзя повторно использовать.
+          Вместо статического представления того, что рендерит <Mouse>,
+          используем рендер-проп для динамического определения, что надо отрендерить.
         */}
-        <Cat mouse={this.state} />
+        {this.props.render(this.state)}
       </div>
     );
   }
@@ -44,7 +42,9 @@ class MouseTracker extends React.Component {
     return (
       <div>
         <h1>Перемещайте курсор мыши!</h1>
-        <MouseWithCat />
+        <Mouse render={mouse => (
+          <Cat mouse={mouse} />
+        )}/>
       </div>
     );
   }
