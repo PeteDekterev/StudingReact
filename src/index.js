@@ -18,8 +18,10 @@ import './index.css';
 // import App from "./advancedComponents/Context/App";
 // import CustomTextInput from "./advancedComponents/Refs/RefForDOM";
 // import AutoFocusTextInput from "./advancedComponents/Refs/RefForClass";
-import MouseTracker from "./advancedComponents/RenderProps/Cat";
+// import MouseTracker from "./advancedComponents/RenderProps/
+import Example from "./components/hooks/Example";
 import * as serviceWorker from './serviceWorker';
+
 
 // const numbers = [1, 2, 3, 4, 5];
 
@@ -50,7 +52,8 @@ ReactDOM.render(
     {/*<App/>*/}
     {/*<CustomTextInput/>*/}
     {/*<AutoFocusTextInput/>*/}
-    <MouseTracker/>
+    {/*<MouseTracker/>*/}
+    <Example/>
   </div>,
   document.getElementById('root')
 );
