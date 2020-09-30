@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 
 function Example() {
   // Объявление переменной состояния, которую мы назовём "count"
   const [count, setCount] = useState(0);
 
+  // По принципу componentDidMount и componentDidUpdate:
+  useEffect(() => {
+    // Обновляем заголовок документа, используя API браузера
+    document.title = `Вы нажали ${count} раз`;
+  });
+
   return (
     <div>
-      <p>Вы кликнули {count} раз</p>
+      <p>Вы нажали {count} раз</p>
       <button onClick={() => setCount(count + 1)}>
         Нажми на меня
       </button>
