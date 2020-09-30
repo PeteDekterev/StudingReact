@@ -9,6 +9,13 @@ class Example extends React.Component {
     this.onClickBtn = this.onClickBtn.bind(this);
   }
 
+  componentDidMount() {
+    document.title = `Вы нажали ${this.state.count} раз`;
+  }
+  componentDidUpdate() {
+    document.title = `Вы нажали ${this.state.count} раз`;
+  }
+
   onClickBtn() {
     const {count} = this.state;
     const nextCount = count + 1;
