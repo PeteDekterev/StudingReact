@@ -20,7 +20,8 @@ import './index.css';
 // import AutoFocusTextInput from "./advancedComponents/Refs/RefForClass";
 // import MouseTracker from "./advancedComponents/RenderProps/
 // import Example from "./components/hooks/ExampleClass";
-import Effect from "./components/hooks/Effect";
+// import Effect from "./components/hooks/Effect";
+import Ref from "./components/hooks/Ref";
 import * as serviceWorker from './serviceWorker';
 
 
@@ -55,7 +56,8 @@ ReactDOM.render(
     {/*<AutoFocusTextInput/>*/}
     {/*<MouseTracker/>*/}
     {/*<Example/>*/}
-    <Effect/>
+    {/*<Effect/>*/}
+    <Ref/>
   </div>,
   document.getElementById('root')
 );
