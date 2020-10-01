@@ -19,7 +19,8 @@ import './index.css';
 // import CustomTextInput from "./advancedComponents/Refs/RefForDOM";
 // import AutoFocusTextInput from "./advancedComponents/Refs/RefForClass";
 // import MouseTracker from "./advancedComponents/RenderProps/
-import Example from "./components/hooks/ExampleClass";
+// import Example from "./components/hooks/ExampleClass";
+import Effect from "./components/hooks/Effect";
 import * as serviceWorker from './serviceWorker';
 
 
@@ -53,7 +54,8 @@ ReactDOM.render(
     {/*<CustomTextInput/>*/}
     {/*<AutoFocusTextInput/>*/}
     {/*<MouseTracker/>*/}
-    <Example/>
+    {/*<Example/>*/}
+    <Effect/>
   </div>,
   document.getElementById('root')
 );
